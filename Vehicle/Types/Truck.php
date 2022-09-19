@@ -5,7 +5,7 @@ class Truck extends Vehicle {
 
     public function __construct(string $name, int $year, int $weight, Brands $brand, int $doors)
     {
-        parent::__construct($name, $year, $weight, $brand, $doors, Types::Truck);
+        parent::__construct($name, $year, $weight, $brand, $doors, VehicleTypes::Truck);
     }
 
     public function enable4x4(): self

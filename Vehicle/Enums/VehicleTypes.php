@@ -1,5 +1,5 @@
 <?php
 
-enum Types {
+enum VehicleTypes {
     case Truck;
 }

@@ -7,11 +7,11 @@ abstract class Vehicle {
     public readonly int    $year;
     public readonly int    $doorCount;
     public readonly array  $doors;
-    public readonly Types  $type;
+    public readonly VehicleTypes  $type;
     public readonly Hood   $hood;
     public readonly Trunk  $trunk;
 
-    public function __construct(string $name, int $year, int $weight, Brands $brand, int $doors, Types $type)
+    public function __construct(string $name, int $year, int $weight, Brands $brand, int $doors, VehicleTypes $type)
     {
         $this->name = $name;
         $this->year = $year;

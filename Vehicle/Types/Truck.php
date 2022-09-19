@@ -15,7 +15,7 @@ class Truck extends Vehicle {
 
     public function disable4x4(): self
     {
-        return $this->set4x4(true);
+        return $this->set4x4(false);
     }
 
     public function is4x4Enabled(): bool

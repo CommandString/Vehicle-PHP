@@ -5,7 +5,7 @@
 #############
 require_once "./Vehicle/Enums/Brands.php";
 require_once "./Vehicle/Enums/Components.php";
-require_once "./Vehicle/Enums/Types.php";
+require_once "./Vehicle/Enums/VehicleTypes.php";
 
 ###############
 #   VEHICLE   #
@@ -33,5 +33,3 @@ require_once "./Vehicle/Components/Openable/Hood.php";
 $truck = new Truck("F-150", 2022, 4021, Brands::Ford, 4);
 
 $truck->openAll()->doors[1]->window->closeBy(100);
-
-var_dump($truck);

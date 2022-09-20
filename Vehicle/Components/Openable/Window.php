@@ -21,7 +21,7 @@ class Window extends OpenableComponent {
         } else if ($set + $this->openPercentage <= 0) {
             $this->set(false);
         } else {
-            $this->openPercentage = $this->openPercentage + $set;
+            $this->openPercentage += $set;
             $this->opened = true;
         }
 

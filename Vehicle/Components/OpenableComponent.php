@@ -1,13 +1,7 @@
 <?php
 
 abstract class OpenableComponent {
-    protected bool $opened;
-    public readonly Components $type; 
-
-    public function __construct(Components $type, $opened = false) {
-        $this->opened = $opened;
-        $this->type = $type;
-    }
+    public function __construct(public readonly Components $type, protected bool $opened = false) {}
 
     public function isOpened(): bool
     {
@@ -16,9 +10,9 @@ abstract class OpenableComponent {
 
     public function isClosed(): bool
     {
-        return (!$this->opened);
+        return !$this->opened;
     }
-    
+
     public function open(): self
     {
         return $this->set(true);

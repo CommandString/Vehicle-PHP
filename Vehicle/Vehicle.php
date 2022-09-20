@@ -1,24 +1,12 @@
 <?php
 
 abstract class Vehicle {
-    public readonly string $name;
-    public readonly int    $weight;
-    public readonly Brands $brand;
-    public readonly int    $year;
-    public readonly int    $doorCount;
     public readonly array  $doors;
-    public readonly VehicleTypes  $type;
     public readonly Hood   $hood;
     public readonly Trunk  $trunk;
 
-    public function __construct(string $name, int $year, int $weight, Brands $brand, int $doors, VehicleTypes $type)
+    public function __construct(public readonly string $name, public readonly int $year, public readonly int $weight, public readonly Brands $brand, public readonly int $doorCount, public readonly VehicleTypes $type)
     {
-        $this->name = $name;
-        $this->year = $year;
-        $this->weight = $weight;
-        $this->brand = $brand;
-        $this->type = $type;
-        $this->doorCount = $doors;
         $this->trunk = new Trunk();
         $this->hood = new Hood();
 
